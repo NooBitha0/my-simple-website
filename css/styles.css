@@ -1,0 +1,273 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navigation */
+header {
+  /* background-color: #333; */
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 30px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  color: #f09d51;
+}
+
+.btn{
+  border-radius: 10px;
+}
+/* Hero Section */
+.hero {
+  position: relative; /* Make the section relative to position the ::before pseudo-element */
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden; /* Ensure no content overflows */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/coverPage.png') no-repeat center center/cover;
+  opacity: 0.3; /* Adjust this opacity to control the transparency of the background image */
+  z-index: 0; /* Ensure the background stays behind the content */
+}
+
+.hero-content {
+  position: relative; /* Ensure content is above the background */
+  z-index: 1; /* Place the content above the pseudo-element */
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  color: black;
+  font-weight: 1000;
+}
+
+.hero-content p {
+  font-size: 20px;
+  color: black;
+  font-weight: 1000;
+}
+
+.hero-content .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f09d51;
+  color: white;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.hero-content .btn:hover {
+  background-color: #333;
+}
+
+
+/* Projects Section */
+.projects {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.projects h2 {
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+.project-card p {
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+.project-card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+}
+
+.project-card .btn:hover {
+  background-color: #f09d51;
+}
+
+/* About Section */
+.about {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.contact p {
+  font-size: 18px;
+}
+
+.project-card img{
+  height: 200px;
+  width: 300px;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 0px 0px;
+  text-align: left;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-container div {
+  flex: 1;
+  padding: 20px;
+}
+
+.footer-about h3, .footer-contact h3, .footer-quick-links h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-about p, .footer-contact p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-contact .social-links a {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.footer-quick-links ul {
+  list-style: none;
+}
+
+.footer-quick-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-quick-links ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-quick-links ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  background-color: #222;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.footer-bottom p {
+  margin: 5px;
+}
+
+.social-links img {
+  width: 20px;
+  height: 20px;
+}
