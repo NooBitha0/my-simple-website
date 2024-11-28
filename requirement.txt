@@ -1,0 +1,42 @@
+Make it private
+
+Hamburger icon in header
+decrease image size or slide show, and add slide show, company name
+
+Add our services
+Btech, mtech, summer internship (disable), training(disable) hover give right msg
+submit interest form
+
+In contact
+map loaction
+email
+
+
+Add services
+Btech ->click for cse show something for others diable hover working on it
+cse ->major or minor
+Show form 
+
+Mtech -> click
+
+
+Rename projects to domains
+
+mini major exclude
+mobile computing
+secure computing
+parallel distribution
+innovative
+socila networking
+
+add
+DEVops
+
+Hover on domain zoom in add adequte border background
+
+Click on a project
+then a popup 
+branch major and topic selected
+Ask user to send phone and email
+description about what kindof project you want
+Form control (number and email)
