@@ -1,6 +1,8 @@
 Make it private
 
 Hamburger icon in header
+
+*** DONE
 decrease image size or slide show, and add slide show, company name
 
 Add our services
@@ -8,8 +10,7 @@ Btech, mtech, summer internship (disable), training(disable) hover give right ms
 submit interest form
 
 In contact
-map loaction
-email
+map loaction, email
 
 
 Add services
