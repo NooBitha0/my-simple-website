@@ -404,3 +404,183 @@ footer {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+/* BTECH  */
+.btech-projects-section{
+  padding: 20px;
+}
+
+.btech-project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btech-project-card {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.btech-project-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  height: 200px;
+  width: 300px;
+}
+
+.btech-project-card h3 {
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+.btech-project-card p {
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+.btech-project-card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+}
+
+.btech-project-card .btn:hover {
+  background-color: #f09d51;
+}
+
+.btech-project-card:hover {
+  transform: scale(1.1);
+  background-color: #e0f7fa;
+}
+
+.btech-project-card.disabled {
+  /* pointer-events: none; */
+  opacity: 0.5;
+  background-color: #ccc;
+  position: relative; /* For positioning the tooltip */
+}
+
+.btech-project-card.disabled:hover::after {
+  content: "This service is currently unavailable.";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.btech-project-card.disabled:hover {
+  cursor: not-allowed;
+}
+
+.btech-project-card.disabled::after {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* MTECH */
+.mtech-projects-section{
+  padding: 20px;
+}
+
+.mtech-project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mtech-project-card {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.mtech-project-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  height: 200px;
+  width: 300px;
+}
+
+.mtech-project-card h3 {
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+.mtech-project-card p {
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+.mtech-project-card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+}
+
+.mtech-project-card .btn:hover {
+  background-color: #f09d51;
+}
+
+.mtech-project-card:hover {
+  transform: scale(1.1);
+  background-color: #e0f7fa;
+}
+
+.mtech-project-card.disabled {
+  /* pointer-events: none; */
+  opacity: 0.5;
+  background-color: #ccc;
+  position: relative; /* For positioning the tooltip */
+}
+
+.mtech-project-card.disabled:hover::after {
+  content: "This service is currently unavailable.";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mtech-project-card.disabled:hover {
+  cursor: not-allowed;
+}
+
+.mtech-project-card.disabled::after {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}

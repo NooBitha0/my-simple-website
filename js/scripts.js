@@ -1,14 +1,4 @@
-// Smooth Scroll for Anchor Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
-
+//SLIDE SHOW
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -37,3 +27,45 @@ function showSlides(n) {
 }
 
 
+// Function to show only the selected section
+function showOnly(sectionId) {
+  // Hide all sections
+  document.querySelectorAll('#main-content, .dynamic-section').forEach(section => {
+    section.style.display = 'none';
+  });
+
+  // Show the targeted section
+  const target = document.getElementById(sectionId);
+  if (target) {
+    target.style.display = 'block';
+  }
+}
+
+// Event Listeners for Learn More buttons
+document.querySelector('.btech').addEventListener('click', (e) => {
+  e.preventDefault();
+  showOnly('btech-projects'); // Show B.Tech Projects section
+});
+
+document.querySelector('.mtech').addEventListener('click', (e) => {
+  e.preventDefault();
+  showOnly('mtech-projects'); // Show M.Tech Projects section
+});
+
+// Event Listeners for Header/Footer Links
+document.querySelectorAll('nav a, footer a').forEach(anchor => {
+  anchor.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const targetId = e.target.getAttribute('href').substring(1);
+    showOnly('main-content'); // Return to the main content
+    document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+
+// Btech projects
+document.querySelector('.cse-project').addEventListener('click', (e) => {
+  e.preventDefault();
+  showOnly('cse-projects'); // Show M.Tech Projects section
+});
