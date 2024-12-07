@@ -4,13 +4,13 @@ Hamburger icon in header
 
 *** DONE
 decrease image size or slide show, and add slide show, company name
+In contact:- map loaction, email
+Add our services section Btech, mtech, summer internship (disable), training(disable) hover give right msg
 
-Add our services
-Btech, mtech, summer internship (disable), training(disable) hover give right msg
-submit interest form
 
-In contact
-map loaction, email
+
+TODO:- 
+Add our services:- submit interest form
 
 
 Add services

@@ -54,59 +54,105 @@ nav {
 .btn{
   border-radius: 10px;
 }
-/* Hero Section */
-.hero {
-  position: relative; /* Make the section relative to position the ::before pseudo-element */
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+/* Services section */
+.services {
+  background-color: #f4f4f4;
+  padding: 50px 0;
   text-align: center;
-  color: white;
-  overflow: hidden; /* Ensure no content overflows */
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('../images/coverPage.png') no-repeat center center/cover;
-  opacity: 0.3; /* Adjust this opacity to control the transparency of the background image */
-  z-index: 0; /* Ensure the background stays behind the content */
+.services h2 {
+  margin-bottom: 40px;
+  font-size: 36px;
 }
 
-.hero-content {
-  position: relative; /* Ensure content is above the background */
-  z-index: 1; /* Place the content above the pseudo-element */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.hero-content h1 {
-  font-size: 48px;
-  color: black;
-  font-weight: 1000;
+.service-card {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.hero-content p {
-  font-size: 20px;
-  color: black;
-  font-weight: 1000;
+.service-card:hover {
+  transform: scale(1.05);
+  background-color: #e0f7fa;
 }
 
-.hero-content .btn {
+.service-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  height: 100px;
+  width: 100px;
+}
+
+.service-card h3 {
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+.service-card p {
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+.service-card .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #f09d51;
+  background-color: #333;
   color: white;
   text-decoration: none;
-  margin-top: 20px;
 }
 
-.hero-content .btn:hover {
-  background-color: #333;
+.service-card .btn:hover {
+  background-color: #f09d51;
 }
+
+.service-card.disabled {
+  /* pointer-events: none; */
+  opacity: 0.5;
+  background-color: #ccc;
+  position: relative; /* For positioning the tooltip */
+}
+
+.service-card.disabled:hover::after {
+  content: "This service is currently unavailable.";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.service-card.disabled:hover {
+  cursor: not-allowed;
+}
+
+.service-card.disabled::after {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
 
 
 /* Projects Section */
@@ -139,6 +185,8 @@ nav {
 .project-card img {
   max-width: 100%;
   border-radius: 8px;
+  height: 200px;
+  width: 300px;
 }
 
 .project-card h3 {
@@ -197,10 +245,6 @@ nav {
   font-size: 18px;
 }
 
-.project-card img{
-  height: 200px;
-  width: 300px;
-}
 
 /* Footer Styling */
 footer {
@@ -351,12 +395,12 @@ footer {
 }
 
 /* Fading animation */
-.fade {
+.transition {
   animation-name: fade;
   animation-duration: 1.5s;
 }
 
-@keyframes fade {
+@keyframes transition {
   from {opacity: .4}
   to {opacity: 1}
 }
