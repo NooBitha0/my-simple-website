@@ -415,7 +415,7 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 10vh auto;
 }
 
 .btech-project-card {
@@ -423,13 +423,19 @@ footer {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  display: flex; /* Enables Flexbox layout */
+  flex-direction: column; /* Stacks children vertically */
+  align-items: center; /* Centers items horizontally */
+  justify-content: center; /* Centers items vertically */
+  height: 100%; /* Adjust this to fit your layout needs */
+  text-align: center; /* Optional, ensures text is centered */
 }
 
 .btech-project-card img {
   max-width: 100%;
   border-radius: 8px;
-  height: 200px;
-  width: 300px;
+  height: 100px;
+  width: 100px;
 }
 
 .btech-project-card h3 {
@@ -505,7 +511,8 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   max-width: 1200px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin: 10vh auto;
 }
 
 .mtech-project-card {
@@ -513,13 +520,19 @@ footer {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  display: flex; /* Enables Flexbox layout */
+  flex-direction: column; /* Stacks children vertically */
+  align-items: center; /* Centers items horizontally */
+  justify-content: center; /* Centers items vertically */
+  height: 100%; /* Adjust this to fit your layout needs */
+  text-align: center; /* Optional, ensures text is centered */
 }
 
 .mtech-project-card img {
   max-width: 100%;
   border-radius: 8px;
-  height: 200px;
-  width: 300px;
+  height: 100px;
+  width: 100px;
 }
 
 .mtech-project-card h3 {
@@ -583,4 +596,66 @@ footer {
   visibility: hidden;
   transform: translate(-50%, -100%);
   transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* CSE Projects */
+.cse-projects {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.cse-projects h2 {
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+.cse-project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cse-project-card {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex; /* Enables Flexbox layout */
+  flex-direction: column; /* Stacks children vertically */
+  align-items: center; /* Centers items horizontally */
+  justify-content: center; /* Centers items vertically */
+  height: 100%; /* Adjust this to fit your layout needs */
+  text-align: center; /* Optional, ensures text is centered */
+}
+
+.cse-project-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  height: 100px;
+  width: 100px;
+}
+
+.cse-project-card h3 {
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+.cse-project-card p {
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+.cse-project-card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+}
+
+.project-card .btn:hover {
+  background-color: #f09d51;
 }
