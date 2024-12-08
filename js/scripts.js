@@ -65,7 +65,13 @@ document.querySelectorAll('nav a, footer a').forEach(anchor => {
 
 
 // Btech projects
-document.querySelector('.cse-project').addEventListener('click', (e) => {
+document.querySelector('.btech-cse-project').addEventListener('click', (e) => {
   e.preventDefault();
-  showOnly('cse-projects'); // Show M.Tech Projects section
+  showOnly('cse-projects'); // Show only cse Projects section for both btech and mtech
+});
+
+// Mtech projects selected
+document.querySelector('.mtech-cse-project').addEventListener('click', (e) => {
+  e.preventDefault();
+  showOnly('cse-projects'); // Show only cse Projects section for both btech and mtech
 });
