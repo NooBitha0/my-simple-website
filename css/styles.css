@@ -325,7 +325,11 @@ footer {
   position: relative;
   margin: auto;
 }
-
+.slideshow-container img{
+  max-width: 1000px;
+  position: relative;
+  max-height: 70vh;
+}
 /* Hide the images by default */
 .my-slides {
   display: none;

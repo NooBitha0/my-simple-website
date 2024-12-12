@@ -1,30 +1,53 @@
-//SLIDE SHOW
 let slideIndex = 1;
+let slideInterval; // Variable for auto-scrolling interval
+
+// Initialize slideshow
 showSlides(slideIndex);
+startAutoScroll();
 
+// Change slide based on button click
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+    showSlides(slideIndex += n);
+    resetAutoScroll(); // Reset interval on manual interaction
 }
 
+// Change slide based on dot click (if dots are added)
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+    showSlides(slideIndex = n);
+    resetAutoScroll(); // Reset interval on manual interaction
 }
 
+// Main function to display slides
 function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+
+    // Handle index overflow and underflow
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+
+    // Hide all slides
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    // Show the current slide
+    slides[slideIndex - 1].style.display = "block";
 }
+
+// Start automatic scrolling
+function startAutoScroll() {
+    slideInterval = setInterval(() => {
+        plusSlides(1); // Go to the next slide
+    }, 3000); // 3-second interval
+}
+
+// Stop and restart automatic scrolling on interaction
+function resetAutoScroll() {
+    clearInterval(slideInterval); // Stop auto-scrolling
+    startAutoScroll(); // Restart auto-scrolling
+}
+
 
 
 // Function to show only the selected section
@@ -74,4 +97,11 @@ document.querySelector('.btech-cse-project').addEventListener('click', (e) => {
 document.querySelector('.mtech-cse-project').addEventListener('click', (e) => {
   e.preventDefault();
   showOnly('cse-projects'); // Show only cse Projects section for both btech and mtech
+});
+
+document.querySelectorAll('a[target="_blank"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.open(link.href, '_blank');
+  });
 });
