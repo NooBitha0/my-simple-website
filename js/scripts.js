@@ -105,3 +105,24 @@ document.querySelectorAll('a[target="_blank"]').forEach(link => {
       window.open(link.href, '_blank');
   });
 });
+
+//about section
+// Accordion Functionality
+const accordionButtons = document.querySelectorAll(".accordion-button");
+
+accordionButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    // Toggle "active" class on clicked button
+    button.classList.toggle("active");
+
+    // Get the associated content panel
+    const content = button.nextElementSibling;
+
+    // Toggle the max-height of the content panel
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null; // Collapse
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px"; // Expand
+    }
+  });
+});

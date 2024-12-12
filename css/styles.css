@@ -220,12 +220,92 @@ nav {
 .about h2 {
   margin-bottom: 20px;
   font-size: 36px;
+  color: #333;
 }
 
-.about p {
+.about span {
+  color: red;
+}
+
+/* Accordion */
+.accordion-container {
   max-width: 800px;
   margin: 0 auto;
+  text-align: left;
+}
+
+.accordion-item {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.accordion-button {
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 15px 20px;
+  width: 100%;
+  text-align: left;
   font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-button::after {
+  content: "+";
+  font-size: 20px;
+  color: red;
+}
+
+.accordion-button.active::after {
+  content: "-";
+  color: red;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #fff;
+  padding: 0 20px;
+}
+
+.accordion-content p {
+  padding: 15px 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Objectives Grid */
+.objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.objective {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: left;
+}
+
+.objective h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: red;
+}
+
+.objective p {
+  font-size: 16px;
+  margin: 0;
 }
 
 /* Contact Section */
@@ -321,17 +401,21 @@ footer {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  width: 100%; /* Make the container span the full width of the screen */
   position: relative;
   margin: auto;
+  overflow: hidden; /* Prevent images from overflowing the container */
 }
-.slideshow-container img{
-  max-width: 1000px;
-  position: relative;
-  max-height: 70vh;
+
+/* Style the images */
+.slideshow-container img {
+  width: 100%; /* Ensure images span the full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 70vh; /* Optional: Limit the height to 70% of the viewport height */
 }
+
 /* Hide the images by default */
-.my-slides {
+.mySlides {
   display: none;
 }
 
