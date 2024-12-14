@@ -15,7 +15,10 @@
   <!-- Navigation -->
   <header>
     <nav class="d-flex">
-      <div class="logo">SVND Technologies</div>
+      <!-- <div class="logo">SVND Technologies</div> -->
+      <div class="logo">
+        <a href="#home" style="text-decoration: none; color: inherit;color: #02a2f2;font-weight: 700;">SVND Technologies</a>
+      </div>
       <div>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
@@ -27,6 +30,15 @@
       
     </nav>
   </header>
+
+  <div class=" d-flex contact-button align-items-center">
+    <div>
+      <img src="images/icons/contactIcon.svg" alt="" style="padding: 10px">
+    </div>
+    <div style="font-size: 20px;padding-right: 10px;">
+      Contact us
+    </div>
+  </div>
 
   <div id="main-content">
     <section id="home">
@@ -172,10 +184,10 @@
     
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <h2>Contact Us</h2>
+    <!-- <section id="contact" class="contact">
+      <h2 style="color: white;">Contact Us</h2>
       <p>Feel free to reach out for more project information and collaborations.</p>
-    </section>
+    </section> -->
   </div>
   
   <!-- B.Tech and M.Tech Sections (Hidden by Default) -->
@@ -330,6 +342,48 @@
       </div>
     </section>
   </div>
+
+  <div id="enquire-projects" class="enquiry-container dynamic-section" style="display: none;">
+    <h2>Quick Enquiry</h2>
+    <form id="enquiryForm">
+        <label for="name">Name<span class="required">*</span></label>
+        <input type="text" id="name" required>
+
+        <label for="phone">Phone<span class="required">*</span></label>
+        <input type="tel" id="phone" required>
+
+        <label for="email">Email<span class="required">*</span></label>
+        <input type="email" id="email" required>
+
+        <label for="college">College Name</label>
+        <input type="text" id="college">
+
+        <label for="city">City</label>
+        <input type="text" id="city">
+
+        <label for="course">Course</label>
+        <select id="course">
+            <option value="">--Select Course--</option>
+            <option value="B.Tech">B.Tech</option>
+            <option value="M.Tech">M.Tech</option>
+            <option value="MBA">MBA</option>
+        </select>
+
+        <label for="branch">Branch</label>
+        <select id="branch">
+            <option value="">--Select Branch--</option>
+            <option value="CSE">CSE</option>
+            <option value="IT">IT</option>
+            <option value="ECE">ECE</option>
+        </select>
+
+        <label for="description">Description</label>
+        <textarea id="description" rows="4" placeholder="Write something (optional)..."></textarea>
+
+        <div class="error" id="formError">Please fill in all required fields.</div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
 
   <footer>
     <div class="footer-container">

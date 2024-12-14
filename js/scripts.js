@@ -126,3 +126,36 @@ accordionButtons.forEach(button => {
     }
   });
 });
+
+
+// Enquiry form
+const form = document.getElementById("enquiryForm");
+const formError = document.getElementById("formError");
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent default form submission
+    formError.style.display = "none";
+
+    const requiredFields = ["name", "phone", "email"];
+    let isValid = true;
+
+    requiredFields.forEach(id => {
+        const field = document.getElementById(id);
+        if (!field.value.trim()) {
+            isValid = false;
+        }
+    });
+
+    if (isValid) {
+        alert("Form submitted successfully!");
+        form.reset();
+    } else {
+        formError.style.display = "block";
+    }
+});
+
+// enquiry projects selected
+document.querySelector('.contact-button').addEventListener('click', (e) => {
+  e.preventDefault();
+  showOnly('enquire-projects'); // Show only cse Projects section for both btech and mtech
+});
