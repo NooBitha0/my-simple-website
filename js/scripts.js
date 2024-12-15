@@ -130,27 +130,42 @@ accordionButtons.forEach(button => {
 
 // Enquiry form
 const form = document.getElementById("enquiryForm");
-const formError = document.getElementById("formError");
-
-form.addEventListener("submit", function (e) {
+form.addEventListener("submit", async function (e) {
     e.preventDefault(); // Prevent default form submission
-    formError.style.display = "none";
 
-    const requiredFields = ["name", "phone", "email"];
-    let isValid = true;
+    // Gather form data
+    const formData = {
+        name: document.getElementById("name").value,
+        phone: document.getElementById("phone").value,
+        email_id: document.getElementById("email").value,
+        college: document.getElementById("college").value,
+        city: document.getElementById("city").value,
+        course: document.getElementById("course").value,
+        branch: document.getElementById("branch").value,
+        description: document.getElementById("description").value
+    };
 
-    requiredFields.forEach(id => {
-        const field = document.getElementById(id);
-        if (!field.value.trim()) {
-            isValid = false;
+    try {
+        // Send POST request to the API endpoint
+        const response = await fetch('/submit_form', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+      });
+
+        if (response.ok) {
+            const result = await response.json();
+            alert(result.message || "Form submitted successfully!");
+            form.reset(); // Reset the form
+        } else {
+            // const error = await response.json();
+            alert(error.error || "Failed to submit form. Try again later.");
         }
-    });
-
-    if (isValid) {
-        alert("Form submitted successfully!");
-        form.reset();
-    } else {
-        formError.style.display = "block";
+    } catch (err) {
+        console.error("Error:", err);
+        alert("An error occurred while submitting the form.");
     }
 });
 
