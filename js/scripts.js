@@ -146,8 +146,8 @@ form.addEventListener("submit", async function (e) {
     };
 
     try {
-        // Send POST request to the API endpoint
-        const response = await fetch('/submit_form', {
+        // URL change is giving cors
+        const response = await fetch('http://127.0.0.1:5000/submit_form', { 
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'

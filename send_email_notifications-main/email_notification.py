@@ -14,7 +14,7 @@ def send_email(json_data):
     print("----------sender email--------", sender_email)
     print("----------sender password--------", password)
     # receiver_email = "def@gmail.com"
-    receiver_email = json_data['email_id']
+    receiver_email = sender_email
     print("----------receiver email--------", receiver_email)
     
     

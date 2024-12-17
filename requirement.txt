@@ -1,3 +1,52 @@
+
+P1
+// map location update
+https://maps.app.goo.gl/pdEthabfpMQxvADQ8
+
+Phone number change-> 2 numbers provided
+
+//keep header static
+//give office address next to map location
+
+*** code repo make it private
+//Python services can be hosted
+//can we make calls to it from UI of github hosted project
+
+//If above items work ->
+Create a private git repo in svnd github repo and deploy it there
+
+
+//copyright 2024 SVND
+
+P2
+
+//banner size
+height slightly decrease
+width decrease and 
+
+**** FORM SUbmiSSION
+//email validation possible?
+//phone number non numeric?
+
+*****contact us
+On hovering
+//whatsapp appguntur -> write endpoint
+//email to field should be our id
+//form submission
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Make it private
 
 Hamburger icon in header
