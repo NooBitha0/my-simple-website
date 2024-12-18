@@ -133,10 +133,20 @@ const form = document.getElementById("enquiryForm");
 form.addEventListener("submit", async function (e) {
     e.preventDefault(); // Prevent default form submission
 
+      const phoneField = document.getElementById("phone");
+      const phoneValue = phoneField.value.trim();
+
+      // Phone number validation: Check for numeric and length
+      const phoneRegex = /^[0-9]{10}$/; // Adjust length as needed (10 digits assumed)
+      if (!phoneRegex.test(phoneValue)) {
+          alert("Please enter a valid 10-digit phone number.");
+          phoneField.focus();
+          return; // Stop further submission
+      }
     // Gather form data
     const formData = {
         name: document.getElementById("name").value,
-        phone: document.getElementById("phone").value,
+        phone: phoneValue,
         email_id: document.getElementById("email").value,
         college: document.getElementById("college").value,
         city: document.getElementById("city").value,
